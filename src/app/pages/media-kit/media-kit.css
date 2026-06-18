@@ -1,0 +1,69 @@
+:host {
+  display: block;
+  padding-bottom: 3rem;
+}
+
+.page-hero {
+  text-align: center;
+  padding: 3rem 1rem 2rem;
+  color: var(--color-gold);
+}
+
+.page-hero h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 0.5rem;
+}
+
+.page-hero p {
+  margin: 0;
+  font-style: italic;
+  color: var(--color-cream);
+  opacity: 0.85;
+}
+
+.media-kit {
+  padding: 2.5rem;
+}
+
+.media-kit__section + .media-kit__section {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(201, 179, 123, 0.3);
+}
+
+.media-kit__section h2 {
+  font-size: 1rem;
+  color: var(--color-bg-green);
+  margin-bottom: 1rem;
+}
+
+.media-kit__section p {
+  margin: 0;
+  line-height: 1.7;
+}
+
+.media-kit__section a {
+  color: var(--color-plum);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.media-kit__section a:hover {
+  color: var(--color-gold);
+}
+
+.media-kit__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.media-kit__list strong {
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}

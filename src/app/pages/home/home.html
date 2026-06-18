@@ -1,0 +1,65 @@
+<section class="hero">
+  <img class="hero__image" [src]="bannerImage" alt="Pinchy cosplay banner" />
+  <div class="hero__overlay">
+    <h1 class="hero__title">Pinchy</h1>
+    <p class="hero__subtitle">Cosplayer and Gamer</p>
+  </div>
+</section>
+
+<section class="about section-parchment page-container">
+  <div class="about__portrait">
+    <div class="about__frame">
+      <img [src]="coverImage" alt="Pinchy portrait" />
+    </div>
+  </div>
+
+  <div class="about__content">
+    <h2 class="about__heading">About Me</h2>
+    <p class="about__text">{{ aboutText }}</p>
+  </div>
+
+  <svg class="about__watermark" viewBox="0 0 48 48" aria-hidden="true">
+    <circle cx="24" cy="24" r="20" fill="none" stroke="currentColor" stroke-width="0.5" />
+    <polygon points="24,6 28,24 24,42 20,24" fill="currentColor" />
+    <polygon points="6,24 24,20 42,24 24,28" fill="currentColor" opacity="0.4" />
+  </svg>
+</section>
+
+<section class="info-cards page-container">
+  @for (card of infoCards; track card.title) {
+    <article class="info-card">
+      <header class="info-card__header">
+        <span class="info-card__diamond" aria-hidden="true">&#9670;</span>
+        <h3>{{ card.title }}</h3>
+        <span class="info-card__diamond" aria-hidden="true">&#9670;</span>
+      </header>
+      <div class="info-card__image">
+        <img [src]="card.image" [alt]="card.title" />
+      </div>
+      <footer class="info-card__footer">
+        <p>{{ card.description }}</p>
+      </footer>
+    </article>
+  }
+</section>
+
+<section class="gallery-preview section-parchment page-container">
+  <div class="gallery-preview__header">
+    <h2>Gallery</h2>
+    <a routerLink="/gallery" class="gallery-preview__link">
+      View All
+      <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true">
+        <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" fill="none" />
+      </svg>
+    </a>
+  </div>
+
+  <div class="gallery-preview__scroll">
+    @for (item of galleryItems; track item.name) {
+      <figure class="gallery-preview__item">
+        <img [src]="item.image" [alt]="item.name + ' cosplay'" loading="lazy" />
+        <figcaption>{{ item.name }}</figcaption>
+      </figure>
+    }
+  </div>
+</section>

@@ -1,0 +1,13 @@
+<section class="page-hero">
+  <h1>Gallery</h1>
+  <p>Cosplays, characters & captured moments</p>
+</section>
+
+<div class="gallery-grid page-container">
+  @for (item of galleryItems; track item.name) {
+    <figure class="gallery-grid__item">
+      <img [src]="item.image" [alt]="item.name + ' cosplay'" loading="lazy" />
+      <figcaption>{{ item.name }}</figcaption>
+    </figure>
+  }
+</div>

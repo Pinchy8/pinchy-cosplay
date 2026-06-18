@@ -1,0 +1,85 @@
+:host {
+  display: block;
+  padding-bottom: 3rem;
+}
+
+.page-hero {
+  text-align: center;
+  padding: 3rem 1rem 2rem;
+  color: var(--color-gold);
+}
+
+.page-hero h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 0.5rem;
+}
+
+.page-hero p {
+  margin: 0;
+  font-style: italic;
+  color: var(--color-cream);
+  opacity: 0.85;
+}
+
+.contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  padding: 2.5rem;
+}
+
+.contact h2 {
+  font-size: 1rem;
+  color: var(--color-bg-green);
+  margin-bottom: 1rem;
+}
+
+.contact p {
+  margin: 0 0 1.5rem;
+  line-height: 1.7;
+}
+
+.contact__email {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1.25rem;
+  background-color: var(--color-bg-green);
+  color: var(--color-gold);
+  border: var(--border-gold);
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  transition: background-color 0.2s;
+}
+
+.contact__email:hover {
+  background-color: var(--color-plum);
+}
+
+.contact__links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.contact__links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid rgba(30, 61, 42, 0.2);
+  color: var(--color-bg-green);
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.contact__links a:hover {
+  border-color: var(--color-gold);
+  color: var(--color-plum);
+}
+
+@media (max-width: 600px) {
+  .contact {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,32 @@
+<section class="page-hero">
+  <h1>Media Kit</h1>
+  <p>Everything you need for collaborations & features</p>
+</section>
+
+<div class="media-kit page-container section-parchment">
+  <div class="media-kit__section">
+    <h2>About Pinchy</h2>
+    <p>
+      Pinchy is a cosplayer and gamer with a passion for fantasy, storytelling, and creative
+      expression. Content spans cosplay photography, gaming, and community engagement across
+      social platforms.
+    </p>
+  </div>
+
+  <div class="media-kit__section">
+    <h2>Platforms</h2>
+    <ul class="media-kit__list">
+      <li><strong>Instagram:</strong> <a [href]="social.instagram" target="_blank" rel="noopener">@pinchy_y</a></li>
+      <li><strong>TikTok:</strong> <a [href]="social.tiktok" target="_blank" rel="noopener">@pinchy_y</a></li>
+      <li><strong>YouTube:</strong> <a [href]="social.youtube" target="_blank" rel="noopener">@Pinchy_y</a></li>
+    </ul>
+  </div>
+
+  <div class="media-kit__section">
+    <h2>Contact for Collaborations</h2>
+    <p>
+      For brand partnerships, event appearances, or media inquiries, reach out at
+      <a [href]="'mailto:' + social.email">{{ social.email }}</a>.
+    </p>
+  </div>
+</div>
