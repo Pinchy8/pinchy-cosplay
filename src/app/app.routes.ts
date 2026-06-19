@@ -5,7 +5,7 @@ import { MediaKitPage } from './pages/media-kit/media-kit';
 import { ContactPage } from './pages/contact/contact';
 
 export const routes: Routes = [
-  { path: '', component: Home, title: 'Pinchy — Cosplayer & Gamer' },
+  { path: '', component: Home, title: 'Pinchy ☆ Cosplayer' },
   { path: 'gallery', component: GalleryPage, title: 'Gallery — Pinchy' },
   { path: 'media-kit', component: MediaKitPage, title: 'Media Kit — Pinchy' },
   { path: 'contact', component: ContactPage, title: 'Contact — Pinchy' },
