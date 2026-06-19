@@ -17,7 +17,9 @@
 
   <div class="about__content">
     <h2 class="about__heading">About Me</h2>
-    <p class="about__text">{{ aboutText }}</p>
+    @for (paragraph of aboutText; track $index) {
+      <p class="about__text">{{ paragraph }}</p>
+    }
   </div>
 
   <svg class="about__watermark" viewBox="0 0 48 48" aria-hidden="true">

@@ -1,7 +1,7 @@
 import { Component, HostListener, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import {
-  ABOUT_PLACEHOLDER,
+  ABOUT_TEXT,
   GALLERY_ITEMS,
   INFO_CARDS,
   InfoCard,
@@ -16,9 +16,9 @@ import {
 export class Home {
   protected readonly galleryItems = GALLERY_ITEMS;
   protected readonly infoCards = INFO_CARDS;
-  protected readonly aboutText = ABOUT_PLACEHOLDER;
+  protected readonly aboutText = ABOUT_TEXT;
   protected readonly bannerImage = '/assets/images/Banner.jpg';
-  protected readonly coverImage = '/assets/images/info5-4.png';
+  protected readonly coverImage = '/assets/images/info5-5.jpg';
 
   protected readonly activeCard = signal<InfoCard | null>(null);
 

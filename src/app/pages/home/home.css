@@ -79,7 +79,7 @@
   width: 100%;
   max-width: 260px;
   border: 2px solid var(--color-gold);
-  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  border-radius: 4px;
   padding: 0.5rem;
   background-color: var(--color-cream);
 }
@@ -88,20 +88,7 @@
   width: 100%;
   aspect-ratio: 3 / 4;
   object-fit: cover;
-  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
-}
-
-.about__frame-compass {
-  position: absolute;
-  bottom: -0.75rem;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 1.75rem;
-  height: 1.75rem;
-  color: var(--color-gold);
-  background-color: var(--color-cream);
-  border-radius: 50%;
-  padding: 0.15rem;
+  border-radius: 2px;
 }
 
 .about__heading {
@@ -113,6 +100,10 @@
 .about__text {
   font-size: 1.05rem;
   line-height: 1.7;
+  margin: 0 0 1rem;
+}
+
+.about__text:last-child {
   margin-bottom: 0;
 }
 

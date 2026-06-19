@@ -145,5 +145,9 @@ export const SOCIAL_LINKS = {
   youtube: 'https://youtube.com/@Pinchy_y',
 };
 
-export const ABOUT_PLACEHOLDER =
-  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.';
+export const ABOUT_TEXT = [
+  "Hi! My name is Amy, also known as Pinchy.",
+  "I'm a cosplayer from Belgium who loves bringing my favorite characters to life.",
+  "Cosplay is very important to me. It's a creative outlet where I can truly be myself, express my passion for games and anime, and meet amazing people who have become important friends. Being able to make others smile through my cosplay is one of the most rewarding parts of the hobby.",
+  "I mainly cosplay characters from video games and anime, as those are the worlds I'm most passionate about. I'm always looking to learn new skills, improve my craft, and create even more memorable cosplays in the future.",
+];
