@@ -29,21 +29,87 @@
 
 <section class="info-cards page-container">
   @for (card of infoCards; track card.title) {
-    <article class="info-card">
-      <header class="info-card__header">
-        <span class="info-card__diamond" aria-hidden="true">&#9670;</span>
-        <h3>{{ card.title }}</h3>
-        <span class="info-card__diamond" aria-hidden="true">&#9670;</span>
-      </header>
-      <div class="info-card__image">
-        <img [src]="card.image" [alt]="card.title" />
-      </div>
-      <footer class="info-card__footer">
-        <p>{{ card.description }}</p>
-      </footer>
-    </article>
+    @if (card.route) {
+      <a class="info-card info-card--link" [routerLink]="card.route">
+        <header class="info-card__header">
+          <span class="info-card__diamond" aria-hidden="true">&#9670;</span>
+          <h3>{{ card.title }}</h3>
+          <span class="info-card__diamond" aria-hidden="true">&#9670;</span>
+        </header>
+        <div class="info-card__image">
+          <img [src]="card.image" [alt]="card.title" />
+        </div>
+        <footer class="info-card__footer">
+          <p>{{ card.description }}</p>
+        </footer>
+      </a>
+    } @else {
+      <button type="button" class="info-card info-card--button" (click)="openCard(card)">
+        <header class="info-card__header">
+          <span class="info-card__diamond" aria-hidden="true">&#9670;</span>
+          <h3>{{ card.title }}</h3>
+          <span class="info-card__diamond" aria-hidden="true">&#9670;</span>
+        </header>
+        <div class="info-card__image">
+          <img [src]="card.image" [alt]="card.title" />
+        </div>
+        <footer class="info-card__footer">
+          <p>{{ card.description }}</p>
+        </footer>
+      </button>
+    }
   }
 </section>
+
+@if (activeCard(); as card) {
+  <div class="info-modal" (click)="closeModal()">
+    <div
+      class="info-modal__dialog section-parchment"
+      [class.info-modal__dialog--wide]="card.cosplanItems?.length"
+      role="dialog"
+      aria-modal="true"
+      [attr.aria-labelledby]="'info-modal-title'"
+      (click)="$event.stopPropagation()"
+    >
+      <button type="button" class="info-modal__close" (click)="closeModal()" aria-label="Close">
+        &times;
+      </button>
+      <h2 class="info-modal__title" id="info-modal-title">{{ card.title }}</h2>
+      <div class="info-modal__content">
+        @if (card.cosplanItems?.length) {
+          @for (item of card.cosplanItems; track item.name) {
+            <article class="info-modal__cosplan">
+              <h3 class="info-modal__cosplan-name">{{ item.name }}</h3>
+              <p class="info-modal__cosplan-source">{{ item.source }}</p>
+              <span class="info-modal__cosplan-status">{{ item.status }}</span>
+              <img
+                class="info-modal__cosplan-image"
+                [src]="item.image"
+                [alt]="item.name + ' cosplan reference'"
+                loading="lazy"
+              />
+              <p class="info-modal__cosplan-text">{{ item.description }}</p>
+            </article>
+          }
+        } @else if (card.faqItems?.length) {
+          @for (item of card.faqItems; track item.question) {
+            <div class="info-modal__faq-item">
+              <p class="info-modal__question">{{ item.question }}</p>
+              <p class="info-modal__answer">{{ item.answer }}</p>
+            </div>
+          }
+        } @else {
+          @for (paragraph of card.detailContent; track $index) {
+            <p>{{ paragraph }}</p>
+          }
+        }
+      </div>
+      @if (card.contactButton) {
+        <a routerLink="/contact" class="info-modal__cta" (click)="closeModal()">Contact Me</a>
+      }
+    </div>
+  </div>
+}
 
 <section class="gallery-preview section-parchment page-container">
   <div class="gallery-preview__header">

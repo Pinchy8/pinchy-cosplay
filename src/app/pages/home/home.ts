@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, HostListener, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import {
   ABOUT_PLACEHOLDER,
   GALLERY_ITEMS,
   INFO_CARDS,
+  InfoCard,
 } from '../../shared/site-data';
 
 @Component({
@@ -17,5 +18,22 @@ export class Home {
   protected readonly infoCards = INFO_CARDS;
   protected readonly aboutText = ABOUT_PLACEHOLDER;
   protected readonly bannerImage = '/assets/images/Banner.jpg';
-  protected readonly coverImage = '/assets/images/Cover.jpg';
+  protected readonly coverImage = '/assets/images/info5-4.png';
+
+  protected readonly activeCard = signal<InfoCard | null>(null);
+
+  protected openCard(card: InfoCard): void {
+    if (card.detailContent?.length || card.faqItems?.length || card.cosplanItems?.length) {
+      this.activeCard.set(card);
+    }
+  }
+
+  protected closeModal(): void {
+    this.activeCard.set(null);
+  }
+
+  @HostListener('document:keydown.escape')
+  protected onEscape(): void {
+    this.closeModal();
+  }
 }
