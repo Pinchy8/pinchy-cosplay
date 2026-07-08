@@ -1,7 +1,16 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, inject } from '@angular/core';
+import { toSignal } from '@angular/core/rxjs-interop';
+import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
+import { filter, map } from 'rxjs';
 import { Header } from './layout/header/header';
 import { Footer } from './layout/footer/footer';
+
+const CHROMELESS_ROUTES = ['/linktree'];
+
+function isChromeless(url: string): boolean {
+  const path = url.split('?')[0].split('#')[0];
+  return CHROMELESS_ROUTES.includes(path);
+}
 
 @Component({
   selector: 'app-root',
@@ -9,4 +18,14 @@ import { Footer } from './layout/footer/footer';
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
-export class App {}
+export class App {
+  private readonly router = inject(Router);
+
+  protected readonly showChrome = toSignal(
+    this.router.events.pipe(
+      filter((event): event is NavigationEnd => event instanceof NavigationEnd),
+      map((event) => !isChromeless(event.urlAfterRedirects)),
+    ),
+    { initialValue: !isChromeless(this.router.url) },
+  );
+}

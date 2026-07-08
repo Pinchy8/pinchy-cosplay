@@ -1,0 +1,115 @@
+<div class="linktree">
+  <div class="linktree__container">
+    <div class="linktree__avatar linktree-enter" style="animation-delay: 0s">
+      <img [src]="avatarImage" alt="Pinchy" />
+    </div>
+
+    <h1 class="linktree__name linktree-enter" style="animation-delay: 0.08s">Pinchy</h1>
+    <p class="linktree__subtitle linktree-enter" style="animation-delay: 0.14s">Cosplayer</p>
+
+    <a
+      routerLink="/contact"
+      class="linktree__mail linktree-enter"
+      style="animation-delay: 0.17s"
+      aria-label="Contact me by mail"
+    >
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+        <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+        <path d="M3.5 6.5l8.5 6 8.5-6"></path>
+      </svg>
+    </a>
+
+    <div class="linktree__divider linktree-enter" style="animation-delay: 0.2s">
+      <span class="linktree__divider-line"></span>
+      <span class="linktree__divider-diamond"></span>
+      <span class="linktree__divider-line"></span>
+    </div>
+
+    <div class="linktree__group linktree-enter" style="animation-delay: 0.26s">
+      <a routerLink="/" class="linktree__btn">Website</a>
+      <a routerLink="/media-kit" class="linktree__btn">Media Kit</a>
+    </div>
+
+    <h2 class="linktree__heading linktree-enter" style="animation-delay: 0.32s">Support me</h2>
+    <div class="linktree__group linktree-enter" style="animation-delay: 0.36s">
+      <a
+        href="https://ko-fi.com/pinchyy"
+        target="_blank"
+        rel="noopener"
+        class="linktree__btn"
+        >Ko-fi</a
+      >
+      <a
+        href="https://throne.com/pinchy"
+        target="_blank"
+        rel="noopener"
+        class="linktree__btn"
+        >Throne</a
+      >
+    </div>
+
+    <h2 class="linktree__heading linktree-enter" style="animation-delay: 0.42s">
+      Discount codes
+    </h2>
+    <div class="linktree__group linktree-enter" style="animation-delay: 0.46s">
+      @for (item of discountCodes; track item.shop) {
+        <a
+          [href]="item.url"
+          target="_blank"
+          rel="noopener"
+          class="linktree__btn linktree__btn--code"
+        >
+          <span class="linktree__code-shop">{{ item.shop }}</span>
+          <span class="linktree__code-detail">code: {{ item.code }} &middot; {{ item.discount }}</span>
+        </a>
+      }
+    </div>
+
+    <h2 class="linktree__heading linktree-enter" style="animation-delay: 0.52s">Socials</h2>
+    <div class="linktree__group linktree__group--last linktree-enter" style="animation-delay: 0.56s">
+      <a
+        href="https://www.instagram.com/pinchy_y/"
+        target="_blank"
+        rel="noopener"
+        class="linktree__btn"
+      >
+        <span class="linktree__btn-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+            <circle cx="12" cy="12" r="4.2"></circle>
+            <circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" stroke="none"></circle>
+          </svg>
+          Instagram
+        </span>
+      </a>
+      <a
+        href="https://www.tiktok.com/@pinchy_y"
+        target="_blank"
+        rel="noopener"
+        class="linktree__btn"
+      >
+        <span class="linktree__btn-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M15 3v10.7a3.6 3.6 0 1 1-3-3.55"></path>
+            <path d="M15 3c0 3 2.3 5 5 5"></path>
+          </svg>
+          TikTok
+        </span>
+      </a>
+      <a
+        href="https://www.youtube.com/@Pinchy_y"
+        target="_blank"
+        rel="noopener"
+        class="linktree__btn"
+      >
+        <span class="linktree__btn-icon">
+          <svg width="20" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <rect x="2.5" y="4.5" width="19" height="15" rx="4"></rect>
+            <path d="M10.5 9v6l5-3z" fill="currentColor" stroke="none"></path>
+          </svg>
+          YouTube
+        </span>
+      </a>
+    </div>
+  </div>
+</div>

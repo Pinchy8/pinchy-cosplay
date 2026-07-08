@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+
+:host {
+  --linktree-accent: #c9a862;
+  --linktree-accent-dim: color-mix(in oklab, var(--linktree-accent) 45%, transparent);
+  --linktree-bg: #16241a;
+  --linktree-bg-glow: color-mix(in oklab, var(--linktree-accent) 10%, transparent);
+  --linktree-cream: #f3ede2;
+  --linktree-cream-dim: color-mix(in oklab, var(--linktree-cream) 78%, var(--linktree-bg));
+  --linktree-dark-text: #1c2b1c;
+
+  display: block;
+}
+
+@keyframes linktreeFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.linktree-enter {
+  opacity: 0;
+  animation: linktreeFadeUp 0.65s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.linktree {
+  min-height: 100vh;
+  width: 100%;
+  background: var(--linktree-bg);
+  background-image: radial-gradient(ellipse 900px 500px at 50% -10%, var(--linktree-bg-glow), transparent 60%);
+  display: flex;
+  justify-content: center;
+  padding: 64px 20px 80px;
+  box-sizing: border-box;
+  font-family: 'EB Garamond', serif;
+}
+
+.linktree__container {
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.linktree__avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  padding: 3px;
+  background: linear-gradient(135deg, var(--linktree-accent), var(--linktree-accent-dim));
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+.linktree__avatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #0e1712;
+  object-fit: cover;
+  display: block;
+}
+
+.linktree__name {
+  margin-top: 22px;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  font-size: 40px;
+  letter-spacing: 0.12em;
+  color: var(--linktree-accent);
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.linktree__subtitle {
+  margin-top: 6px;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 15px;
+  letter-spacing: 0.18em;
+  color: var(--linktree-cream-dim);
+  text-transform: uppercase;
+}
+
+.linktree__mail {
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  color: var(--linktree-cream-dim);
+  border: 1px solid var(--linktree-accent-dim);
+  transition: color 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+}
+
+.linktree__mail:hover {
+  color: var(--linktree-accent);
+  border-color: var(--linktree-accent);
+  transform: translateY(-2px);
+}
+
+.linktree__divider {
+  margin-top: 26px;
+  margin-bottom: 8px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.linktree__divider-line {
+  flex: 1;
+  height: 1px;
+  background: var(--linktree-accent-dim);
+}
+
+.linktree__divider-diamond {
+  width: 5px;
+  height: 5px;
+  transform: rotate(45deg);
+  background: var(--linktree-accent);
+}
+
+.linktree__group {
+  width: 100%;
+  margin-top: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.linktree__group--last {
+  margin-bottom: 8px;
+}
+
+.linktree__heading {
+  margin-top: 30px;
+  margin-bottom: 14px;
+  font-family: 'EB Garamond', serif;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--linktree-accent);
+  text-align: center;
+  width: 100%;
+}
+
+.linktree__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 15px 20px;
+  border-radius: 16px;
+  background: var(--linktree-cream);
+  border: 1px solid var(--linktree-accent);
+  color: var(--linktree-dark-text);
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  font-size: 19px;
+  letter-spacing: 0.05em;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.18);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease, color 0.15s ease;
+  cursor: pointer;
+}
+
+.linktree__btn:hover {
+  background: var(--linktree-accent);
+  border-color: var(--linktree-accent);
+  color: var(--linktree-bg);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+.linktree__btn--code {
+  flex-direction: column;
+  padding: 12px 20px;
+  gap: 1px;
+}
+
+.linktree__code-shop {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 19px;
+  letter-spacing: 0.04em;
+}
+
+.linktree__code-detail {
+  font-family: 'EB Garamond', serif;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  opacity: 0.6;
+  margin-top: 2px;
+}
+
+.linktree__btn-icon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
