@@ -1,0 +1,39 @@
+<section class="page-hero">
+  <h1>Conventions</h1>
+  <p>Where you can find me next.</p>
+  <p>And a few conventions I'm hoping to confirm soon.</p>
+</section>
+
+<div class="conventions-grid page-container">
+  @for (conv of conventions; track conv.name) {
+    <article class="convention-card">
+      <span class="convention-card__badge" [class.convention-card__badge--tentative]="!conv.confirmed">
+        {{ conv.confirmed ? 'Confirmed' : 'Not confirmed' }}
+      </span>
+
+      <div class="convention-card__date">
+        <span class="convention-card__day">{{ conv.day }}</span>
+        <span class="convention-card__month">{{ conv.month }}</span>
+      </div>
+
+      <div class="convention-card__body">
+        <h2 class="convention-card__name">{{ conv.name }}</h2>
+        <p class="convention-card__location">{{ conv.location }}</p>
+        @if (conv.isMultiDay) {
+          <p class="convention-card__dates">{{ conv.dateRange }}</p>
+        }
+        @if (conv.attendingDays) {
+          <p class="convention-card__days">Attending: {{ conv.attendingDays }}</p>
+        }
+        <a class="convention-card__link" [href]="conv.link" target="_blank" rel="noopener">
+          Visit event site &#8599;
+        </a>
+      </div>
+    </article>
+  }
+</div>
+
+<section class="page-down">
+  <p>"Not confirmed" is for cons I want to attend but haven't planned yet.</p>
+  <p>I'll update this page once they're locked in.</p>
+</section>

@@ -1,0 +1,23 @@
+<div
+  class="convention-banner"
+  role="link"
+  tabindex="0"
+  (click)="goToConventions()"
+  (keydown.enter)="goToConventions()"
+>
+  <span class="convention-banner__label">
+    <span class="convention-banner__eyebrow">Next convention:</span>
+    <span class="convention-banner__name">{{ event.name }}</span>
+  </span>
+
+  <div class="convention-banner__countdown">
+    @for (part of countdownParts(); track part.label) {
+      <div class="convention-banner__part">
+        <span class="convention-banner__value">{{ part.value }}</span>
+        <span class="convention-banner__unit">{{ part.label }}</span>
+      </div>
+    }
+  </div>
+
+  <span class="convention-banner__cta">Meet me there!</span>
+</div>

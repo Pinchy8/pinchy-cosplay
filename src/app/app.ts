@@ -4,6 +4,7 @@ import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { filter, map } from 'rxjs';
 import { Header } from './layout/header/header';
 import { Footer } from './layout/footer/footer';
+import { ConventionBanner } from './layout/convention-banner/convention-banner';
 
 const CHROMELESS_ROUTES = ['/linktree'];
 
@@ -14,7 +15,7 @@ function isChromeless(url: string): boolean {
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Header, Footer],
+  imports: [RouterOutlet, Header, Footer, ConventionBanner],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
