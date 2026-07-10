@@ -23,7 +23,7 @@ export class Home {
   protected readonly activeCard = signal<InfoCard | null>(null);
 
   protected openCard(card: InfoCard): void {
-    if (card.detailContent?.length || card.faqItems?.length || card.cosplanItems?.length) {
+    if (card.detailContent?.length || card.faqItems?.length || card.cosplanItems) {
       this.activeCard.set(card);
     }
   }

@@ -264,6 +264,11 @@
   margin-bottom: 0;
 }
 
+.info-modal__empty {
+  font-style: italic;
+  opacity: 0.75;
+}
+
 .info-modal__faq-item {
   margin-bottom: 1.25rem;
 }
@@ -308,55 +313,107 @@
   background-color: var(--color-plum);
 }
 
-.info-modal__cosplan {
-  padding-bottom: 1.75rem;
-  margin-bottom: 1.75rem;
-  border-bottom: 1px solid rgba(201, 179, 123, 0.35);
+.cosplan-card {
+  display: flex;
+  gap: 1.25rem;
+  border: var(--border-gold);
+  border-radius: 4px;
+  background-color: var(--color-cream);
+  overflow: hidden;
+  margin-bottom: 1.5rem;
 }
 
-.info-modal__cosplan:last-child {
-  padding-bottom: 0;
+.cosplan-card:last-child {
   margin-bottom: 0;
-  border-bottom: none;
 }
 
-.info-modal__cosplan-name {
-  font-size: 1rem;
-  color: var(--color-bg-green);
-  margin-bottom: 0.35rem;
+.cosplan-card__media {
+  position: relative;
+  flex: 0 0 clamp(96px, 28%, 140px);
 }
 
-.info-modal__cosplan-source {
-  margin: 0 0 0.5rem;
-  font-size: 0.85rem;
-  font-style: italic;
-  color: var(--color-plum);
-}
-
-.info-modal__cosplan-status {
-  display: inline-block;
-  margin-bottom: 0.85rem;
-  padding: 0.2rem 0.6rem;
-  background-color: var(--color-bg-green);
-  color: var(--color-gold);
-  font-family: var(--font-heading);
-  font-size: 0.55rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-
-.info-modal__cosplan-image {
+.cosplan-card__image {
   width: 100%;
+  height: 100%;
   aspect-ratio: 3 / 4;
   object-fit: cover;
   object-position: top;
-  border: var(--border-gold);
-  margin-bottom: 0.85rem;
 }
 
-.info-modal__cosplan-text {
+.cosplan-card__status {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: 20px;
+  background-color: var(--color-bg-green);
+  color: var(--color-gold);
+  font-family: var(--font-heading);
+  font-size: 0.5rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.cosplan-card__body {
+  flex: 1;
+  min-width: 0;
+  padding: 1rem 1.1rem 1.1rem 0;
+}
+
+.cosplan-card__info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.cosplan-card__row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.cosplan-card__label {
+  flex: 0 0 auto;
+  font-family: var(--font-heading);
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-plum);
+}
+
+.cosplan-card__value {
+  font-size: 0.95rem;
+  color: var(--color-bg-green);
+}
+
+.cosplan-card__divider {
+  height: 1px;
+  margin: 0.85rem 0;
+  background-color: rgba(75, 46, 61, 0.25);
+}
+
+.cosplan-card__description {
   margin: 0;
   line-height: 1.7;
+}
+
+@media (max-width: 500px) {
+  .cosplan-card {
+    flex-direction: column;
+  }
+
+  .cosplan-card__media {
+    flex: none;
+  }
+
+  .cosplan-card__image {
+    aspect-ratio: 16 / 9;
+  }
+
+  .cosplan-card__body {
+    padding: 1rem 1.1rem 1.1rem;
+  }
 }
 
 .gallery-preview {

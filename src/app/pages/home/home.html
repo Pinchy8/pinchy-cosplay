@@ -78,20 +78,37 @@
       </button>
       <h2 class="info-modal__title" id="info-modal-title">{{ card.title }}</h2>
       <div class="info-modal__content">
-        @if (card.cosplanItems?.length) {
-          @for (item of card.cosplanItems; track item.name) {
-            <article class="info-modal__cosplan">
-              <h3 class="info-modal__cosplan-name">{{ item.name }}</h3>
-              <p class="info-modal__cosplan-source">{{ item.source }}</p>
-              <span class="info-modal__cosplan-status">{{ item.status }}</span>
-              <img
-                class="info-modal__cosplan-image"
-                [src]="item.image"
-                [alt]="item.name + ' cosplan reference'"
-                loading="lazy"
-              />
-              <p class="info-modal__cosplan-text">{{ item.description }}</p>
-            </article>
+        @if (card.cosplanItems) {
+          @if (card.cosplanItems.length) {
+            @for (item of card.cosplanItems; track item.name) {
+              <article class="cosplan-card">
+                <div class="cosplan-card__media">
+                  <img
+                    class="cosplan-card__image"
+                    [src]="item.image"
+                    [alt]="item.name + ' cosplan reference'"
+                    loading="lazy"
+                  />
+                  <span class="cosplan-card__status">{{ item.status }}</span>
+                </div>
+                <div class="cosplan-card__body">
+                  <div class="cosplan-card__info">
+                    <div class="cosplan-card__row">
+                      <span class="cosplan-card__label">Character</span>
+                      <span class="cosplan-card__value">{{ item.name }}</span>
+                    </div>
+                    <div class="cosplan-card__row">
+                      <span class="cosplan-card__label">{{ item.category }}</span>
+                      <span class="cosplan-card__value">{{ item.series }}</span>
+                    </div>
+                  </div>
+                  <div class="cosplan-card__divider" aria-hidden="true"></div>
+                  <p class="cosplan-card__description">{{ item.description }}</p>
+                </div>
+              </article>
+            }
+          } @else {
+            <p class="info-modal__empty">No cosplays planned.</p>
           }
         } @else if (card.faqItems?.length) {
           @for (item of card.faqItems; track item.question) {

@@ -10,7 +10,8 @@ export interface FaqItem {
 
 export interface CosplanItem {
   name: string;
-  source: string;
+  category: string;
+  series: string;
   image: string;
   status: string;
   description: string;
@@ -63,17 +64,19 @@ export const INFO_CARDS: InfoCard[] = [
     image: '/assets/images/info3.png',
     description: 'All the cosplays I have planned to do, and the ones I am currently working on.',
     cosplanItems: [
-      {
-        name: 'Alice',
-        source: 'Video Game — Alice: Madness Returns',
-        image: '/assets/cosplans/alice_madness_returns.jpg',
-        status: 'On hold',
-        description:
-          'I have wanted to cosplay Alice for a very long time — especially several of her beautiful outfits from the game. This is a project I hope to craft myself one day. The cosplay is currently on pause because fabric I originally bought for her was used for another project, but she remains very high on my list.',
-      },
+      // {
+      //   name: 'Alice',
+      //   category: 'Video Game',
+      //   series: 'Alice: Madness Returns',
+      //   image: '/assets/cosplans/alice_madness_returns.jpg',
+      //   status: 'On hold',
+      //   description:
+      //     'I have wanted to cosplay Alice for a very long time — especially several of her beautiful outfits from the game. This is a project I hope to craft myself one day. The cosplay is currently on pause because fabric I originally bought for her was used for another project, but she remains very high on my list.',
+      // },
       {
         name: 'Draculaura',
-        source: 'Monster High',
+        category: 'Franchise',
+        series: 'Monster High',
         image: '/assets/cosplans/Draculaura.webp',
         status: 'Coming soon',
         description:
@@ -81,23 +84,26 @@ export const INFO_CARDS: InfoCard[] = [
       },
       {
         name: 'Lucy',
-        source: 'Anime — Cyberpunk: Edgerunners',
+        category: 'Anime',
+        series: 'Cyberpunk: Edgerunners',
         image: '/assets/cosplans/lucy.webp',
         status: 'Wishlist',
         description:
           "Lucy is on my cosplay wishlist. I don't have a date planned for her yet, but she is absolutely a character I hope to bring to life one day — her design and story left a lasting impression on me.",
       },
-      {
-        name: 'Narciso Anasui',
-        source: "Anime & Manga — JoJo's Bizarre Adventure: Stone Ocean",
-        image: '/assets/cosplans/Narciso_Anasui.webp',
-        status: 'In preparation',
-        description:
-          'This is a cosplay I am planning to make myself. I already have all the materials ready and hope to start working on it very soon!',
-      },
+      // {
+      //   name: 'Narciso Anasui',
+      //   category: 'Anime & Manga',
+      //   series: "JoJo's Bizarre Adventure: Stone Ocean",
+      //   image: '/assets/cosplans/Narciso_Anasui.webp',
+      //   status: 'In preparation',
+      //   description:
+      //     'This is a cosplay I am planning to make myself. I already have all the materials ready and hope to start working on it very soon!',
+      // },
       {
         name: 'Pierrot',
-        source: 'Video Game — The Freak Circus',
+        category: 'Video Game',
+        series: 'The Freak Circus',
         image: '/assets/cosplans/Pierrot.webp',
         status: 'Coming soon — duo cosplay',
         description:
