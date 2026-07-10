@@ -3,6 +3,11 @@
 </section>
 
 <div class="media-kit page-container">
+  <div class="total-audience">
+    <span class="total-audience__value">{{ totalAudience | number }}</span>
+    <span class="total-audience__label">Total followers across all platforms</span>
+  </div>
+
   <div class="platform-tabs" role="tablist" aria-label="Social platforms">
     @for (platform of platforms; track platform) {
       <button

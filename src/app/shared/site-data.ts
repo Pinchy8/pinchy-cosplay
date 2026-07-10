@@ -29,6 +29,7 @@ export interface InfoCard {
 }
 
 export const GALLERY_ITEMS: GalleryItem[] = [
+  { name: 'Nikki', image: '/assets/images/Nikki.png' },
   { name: 'Zanka', image: '/assets/images/Zanka.png' },
   { name: 'Kokomi', image: '/assets/images/Kokomi.png' },
   { name: 'Lumine', image: '/assets/images/Lumine.png' },
@@ -38,7 +39,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   { name: 'Alice', image: '/assets/images/Alice.jpg' },
   { name: 'Itsuki Sumeragi', image: '/assets/images/Itsuki Sumeragi.jpg' },
   { name: 'Dio', image: '/assets/images/Dio.jpg' },
-  { name: 'Bruno', image: '/assets/images/Bruno.png' },
+  { name: 'Bruno Bucciarati', image: '/assets/images/Bruno.png' },
 ];
 
 export const INFO_CARDS: InfoCard[] = [

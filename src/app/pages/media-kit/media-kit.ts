@@ -26,6 +26,11 @@ export class MediaKitPage {
     () => this.insights[this.selectedPlatform()],
   );
 
+  protected readonly totalAudience = this.platforms.reduce(
+    (total, platform) => total + this.insights[platform].audienceCount,
+    0,
+  );
+
   protected selectPlatform(platform: MediaPlatform): void {
     this.selectedPlatform.set(platform);
   }
