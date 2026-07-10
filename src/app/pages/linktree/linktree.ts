@@ -10,5 +10,5 @@ import { DISCOUNT_CODES } from '../../shared/linktree-data';
 })
 export class LinktreePage {
   protected readonly discountCodes = DISCOUNT_CODES;
-  protected readonly avatarImage = '/assets/images/Cover-Nikki-Small.JPG';
+  protected readonly avatarImage = 'assets/images/Cover-Nikki-Small.JPG';
 }

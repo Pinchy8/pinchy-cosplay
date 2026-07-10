@@ -29,23 +29,23 @@ export interface InfoCard {
 }
 
 export const GALLERY_ITEMS: GalleryItem[] = [
-  { name: 'Nikki', image: '/assets/images/Nikki.png' },
-  { name: 'Zanka', image: '/assets/images/Zanka.png' },
-  { name: 'Kokomi', image: '/assets/images/Kokomi.png' },
-  { name: 'Lumine', image: '/assets/images/Lumine.png' },
-  { name: 'Umbreon', image: '/assets/images/Umbreon.png' },
-  { name: 'Furina', image: '/assets/images/Furina.png' },
-  { name: 'Bloom', image: '/assets/images/Bloom.jpg' },
-  { name: 'Alice', image: '/assets/images/Alice.jpg' },
-  { name: 'Itsuki Sumeragi', image: '/assets/images/Itsuki Sumeragi.jpg' },
-  { name: 'Dio', image: '/assets/images/Dio.jpg' },
-  { name: 'Bruno Bucciarati', image: '/assets/images/Bruno.png' },
+  { name: 'Nikki', image: 'assets/images/Nikki.png' },
+  { name: 'Zanka', image: 'assets/images/Zanka.png' },
+  { name: 'Kokomi', image: 'assets/images/Kokomi.png' },
+  { name: 'Lumine', image: 'assets/images/Lumine.png' },
+  { name: 'Umbreon', image: 'assets/images/Umbreon.png' },
+  { name: 'Furina', image: 'assets/images/Furina.png' },
+  { name: 'Bloom', image: 'assets/images/Bloom.jpg' },
+  { name: 'Alice', image: 'assets/images/Alice.jpg' },
+  { name: 'Itsuki Sumeragi', image: 'assets/images/Itsuki Sumeragi.jpg' },
+  { name: 'Dio', image: 'assets/images/Dio.jpg' },
+  { name: 'Bruno Bucciarati', image: 'assets/images/Bruno.png' },
 ];
 
 export const INFO_CARDS: InfoCard[] = [
   {
     title: 'Collaborate',
-    image: '/assets/images/info1-2.png',
+    image: 'assets/images/info1-2.png',
     description: 'What I can do as a cosplayer for you.',
     contactButton: true,
     detailContent: [
@@ -56,13 +56,13 @@ export const INFO_CARDS: InfoCard[] = [
   },
   {
     title: 'Media Kit',
-    image: '/assets/images/info2.png',
+    image: 'assets/images/info2.png',
     description: 'All info about my social platforms, have more questions? Contact me!',
     route: '/media-kit',
   },
   {
     title: 'Cosplans',
-    image: '/assets/images/info3.png',
+    image: 'assets/images/info3.png',
     description: 'All the cosplays I have planned to do, and the ones I am currently working on.',
     cosplanItems: [
       // {
@@ -114,7 +114,7 @@ export const INFO_CARDS: InfoCard[] = [
   },
   {
     title: 'Q&A',
-    image: '/assets/images/info6.jpg',
+    image: 'assets/images/info6.jpg',
     description: 'Questions & answers.',
     faqItems: [
       {

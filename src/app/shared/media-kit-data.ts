@@ -46,7 +46,7 @@ export const MEDIA_KIT_INSIGHTS: Record<MediaPlatform, PlatformInsights> = {
       { label: 'Italy', value: 7.0 },
       { label: 'Brazil', value: 6.7 },
     ],
-    showcaseImage: '/assets/images/info1.png',
+    showcaseImage: 'assets/images/info1.png',
   },
   tiktok: {
     platform: 'tiktok',
@@ -73,7 +73,7 @@ export const MEDIA_KIT_INSIGHTS: Record<MediaPlatform, PlatformInsights> = {
       { label: 'France', value: 5.0 },
       { label: 'Netherlands', value: 4.8 },
     ],
-    showcaseImage: '/assets/images/info5.jpg',
+    showcaseImage: 'assets/images/info5.jpg',
   },
   youtube: {
     platform: 'youtube',
@@ -99,7 +99,7 @@ export const MEDIA_KIT_INSIGHTS: Record<MediaPlatform, PlatformInsights> = {
       { label: 'Brazil', value: 3.3 },
       { label: 'Mexico', value: 2.7 },
     ],
-    showcaseImage: '/assets/images/info7.jpg',
+    showcaseImage: 'assets/images/info7.jpg',
   },
 };
 

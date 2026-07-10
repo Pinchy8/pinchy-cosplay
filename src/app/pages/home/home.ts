@@ -19,8 +19,8 @@ export class Home {
   protected readonly infoCards = INFO_CARDS;
   protected readonly aboutText = ABOUT_TEXT;
   protected readonly social = SOCIAL_LINKS;
-  protected readonly bannerImage = '/assets/images/Banner.jpg';
-  protected readonly coverImage = '/assets/images/Cover-Nikki-Small.JPG';
+  protected readonly bannerImage = 'assets/images/Banner.jpg';
+  protected readonly coverImage = 'assets/images/Cover-Nikki-Small.JPG';
 
   protected readonly activeCard = signal<InfoCard | null>(null);
 
