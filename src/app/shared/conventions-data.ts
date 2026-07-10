@@ -1,16 +1,10 @@
 export interface ConventionEvent {
   name: string;
-  /** Convention start date — always shown, regardless of confirmation status. */
   date: string;
-  /** Convention end date, or null for a single-day event. */
   dateEnd: string | null;
   location: string;
   confirmed: boolean;
   link: string;
-  /**
-   * Specific days she plans to attend — need not be consecutive or span
-   * the full convention. Only shown once `confirmed` is true. Max 5 days.
-   */
   attendingDates?: string[];
 }
 

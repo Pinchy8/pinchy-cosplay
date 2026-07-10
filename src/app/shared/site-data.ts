@@ -72,7 +72,7 @@ export const INFO_CARDS: InfoCard[] = [
       //   image: 'assets/cosplans/alice_madness_returns.jpg',
       //   status: 'On hold',
       //   description:
-      //     'I have wanted to cosplay Alice for a very long time — especially several of her beautiful outfits from the game. This is a project I hope to craft myself one day. The cosplay is currently on pause because fabric I originally bought for her was used for another project, but she remains very high on my list.',
+      //     'I have wanted to cosplay Alice for a very long time, especially several of her beautiful outfits from the game. This is a project I hope to craft myself one day. The cosplay is currently on pause because fabric I originally bought for her was used for another project, but she remains very high on my list.',
       // },
       {
         name: 'Draculaura',
@@ -90,7 +90,7 @@ export const INFO_CARDS: InfoCard[] = [
         image: 'assets/cosplans/lucy.webp',
         status: 'Wishlist',
         description:
-          "Lucy is on my cosplay wishlist. I don't have a date planned for her yet, but she is absolutely a character I hope to bring to life one day — her design and story left a lasting impression on me.",
+          "Lucy is on my cosplay wishlist. I don't have a date planned for her yet, but she is absolutely a character I hope to bring to life one day.",
       },
       // {
       //   name: 'Narciso Anasui',
@@ -106,7 +106,7 @@ export const INFO_CARDS: InfoCard[] = [
         category: 'Video Game',
         series: 'The Freak Circus',
         image: 'assets/cosplans/Pierrot.webp',
-        status: 'Coming soon — duo cosplay',
+        status: 'Coming soon',
         description:
           'This cosplay is already purchased and I plan to wear it soon. It will be a duo cosplay with a friend who will be dressing as Harlequin!',
       },

@@ -8,10 +8,10 @@ import { ConventionsPage } from './pages/conventions/conventions';
 
 export const routes: Routes = [
   { path: '', component: Home, title: 'Pinchy ☆ Cosplayer' },
-  { path: 'gallery', component: GalleryPage, title: 'Gallery — Pinchy' },
-  { path: 'media-kit', component: MediaKitPage, title: 'Media Kit — Pinchy' },
-  { path: 'conventions', component: ConventionsPage, title: 'Conventions — Pinchy' },
-  { path: 'contact', component: ContactPage, title: 'Contact — Pinchy' },
+  { path: 'gallery', component: GalleryPage, title: 'Gallery ☆ Pinchy' },
+  { path: 'media-kit', component: MediaKitPage, title: 'Media Kit ☆ Pinchy' },
+  { path: 'conventions', component: ConventionsPage, title: 'Conventions ☆ Pinchy' },
+  { path: 'contact', component: ContactPage, title: 'Contact ☆ Pinchy' },
   { path: 'linktree', component: LinktreePage, title: 'Pinchy ☆ Links' },
   { path: '**', redirectTo: '' },
 ];
