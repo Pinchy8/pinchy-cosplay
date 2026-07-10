@@ -69,7 +69,7 @@ export const INFO_CARDS: InfoCard[] = [
       //   name: 'Alice',
       //   category: 'Video Game',
       //   series: 'Alice: Madness Returns',
-      //   image: '/assets/cosplans/alice_madness_returns.jpg',
+      //   image: 'assets/cosplans/alice_madness_returns.jpg',
       //   status: 'On hold',
       //   description:
       //     'I have wanted to cosplay Alice for a very long time — especially several of her beautiful outfits from the game. This is a project I hope to craft myself one day. The cosplay is currently on pause because fabric I originally bought for her was used for another project, but she remains very high on my list.',
@@ -78,7 +78,7 @@ export const INFO_CARDS: InfoCard[] = [
         name: 'Draculaura',
         category: 'Franchise',
         series: 'Monster High',
-        image: '/assets/cosplans/Draculaura.webp',
+        image: 'assets/cosplans/Draculaura.webp',
         status: 'Coming soon',
         description:
           'I already have this cosplay ready and plan to wear it soon! I mainly cosplay characters from games and anime, but every now and then it is wonderful to revisit a character from my childhood.',
@@ -87,7 +87,7 @@ export const INFO_CARDS: InfoCard[] = [
         name: 'Lucy',
         category: 'Anime',
         series: 'Cyberpunk: Edgerunners',
-        image: '/assets/cosplans/lucy.webp',
+        image: 'assets/cosplans/lucy.webp',
         status: 'Wishlist',
         description:
           "Lucy is on my cosplay wishlist. I don't have a date planned for her yet, but she is absolutely a character I hope to bring to life one day — her design and story left a lasting impression on me.",
@@ -96,7 +96,7 @@ export const INFO_CARDS: InfoCard[] = [
       //   name: 'Narciso Anasui',
       //   category: 'Anime & Manga',
       //   series: "JoJo's Bizarre Adventure: Stone Ocean",
-      //   image: '/assets/cosplans/Narciso_Anasui.webp',
+      //   image: 'assets/cosplans/Narciso_Anasui.webp',
       //   status: 'In preparation',
       //   description:
       //     'This is a cosplay I am planning to make myself. I already have all the materials ready and hope to start working on it very soon!',
@@ -105,7 +105,7 @@ export const INFO_CARDS: InfoCard[] = [
         name: 'Pierrot',
         category: 'Video Game',
         series: 'The Freak Circus',
-        image: '/assets/cosplans/Pierrot.webp',
+        image: 'assets/cosplans/Pierrot.webp',
         status: 'Coming soon — duo cosplay',
         description:
           'This cosplay is already purchased and I plan to wear it soon. It will be a duo cosplay with a friend who will be dressing as Harlequin!',
