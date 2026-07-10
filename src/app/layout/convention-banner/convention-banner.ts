@@ -1,7 +1,7 @@
 import { isPlatformBrowser } from '@angular/common';
 import { Component, computed, inject, OnDestroy, OnInit, PLATFORM_ID, signal } from '@angular/core';
 import { Router } from '@angular/router';
-import { nextConvention } from '../../shared/conventions-data';
+import { countdownTargetDate, nextConvention } from '../../shared/conventions-data';
 
 interface CountdownPart {
   value: string;
@@ -18,11 +18,17 @@ export class ConventionBanner implements OnInit, OnDestroy {
   private readonly platformId = inject(PLATFORM_ID);
   private timer?: ReturnType<typeof setInterval>;
 
-  protected readonly event = nextConvention();
   private readonly now = signal(Date.now());
 
+  protected readonly event = computed(() => nextConvention(new Date(this.now())));
+
   protected readonly countdownParts = computed<CountdownPart[]>(() => {
-    const target = new Date(`${this.event.date}T10:00:00`).getTime();
+    const event = this.event();
+    if (!event) {
+      return [];
+    }
+
+    const target = new Date(`${countdownTargetDate(event)}T10:00:00`).getTime();
     const diff = Math.max(0, target - this.now());
 
     const pad = (n: number) => String(n).padStart(2, '0');

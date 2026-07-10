@@ -19,7 +19,6 @@ export interface PlatformInsights {
   showcaseImage: string;
 }
 
-/** Audience demographics are only available via each platform's private analytics — not through free public APIs. */
 export const MEDIA_KIT_INSIGHTS: Record<MediaPlatform, PlatformInsights> = {
   instagram: {
     platform: 'instagram',

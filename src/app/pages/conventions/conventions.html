@@ -5,6 +5,9 @@
 </section>
 
 <div class="conventions-grid page-container">
+  @if (conventions.length === 0) {
+    <p class="conventions-empty">No conventions planned yet. <br>Check back soon!</p>
+  }
   @for (conv of conventions; track conv.name) {
     <article class="convention-card">
       <span class="convention-card__badge" [class.convention-card__badge--tentative]="!conv.confirmed">

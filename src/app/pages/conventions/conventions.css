@@ -42,6 +42,13 @@
   justify-content: center;
 }
 
+.conventions-empty {
+  color: var(--color-cream);
+  font-style: italic;
+  opacity: 0.85;
+  text-align: center;
+}
+
 .convention-card {
   width: 250px;
   background-color: var(--color-cream);

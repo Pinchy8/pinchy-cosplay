@@ -59,6 +59,7 @@ export const CONVENTIONS: ConventionEvent[] = [
     location: 'Belgium',
     confirmed: false,
     link: 'https://www.madeinasia.be',
+    attendingDates: [],
   },
   {
     name: 'FACTS',
@@ -66,7 +67,8 @@ export const CONVENTIONS: ConventionEvent[] = [
     dateEnd: '2026-11-01',
     location: 'Belgium',
     confirmed: false,
-    link: 'https://www.facts-expo.be',
+    link: 'https://www.facts.be/en/',
+    attendingDates: [],
   },
 ];
 
@@ -76,9 +78,26 @@ export function sortedConventions(): ConventionEvent[] {
   );
 }
 
-export function nextConvention(): ConventionEvent {
-  const sorted = sortedConventions();
-  return sorted.find((event) => event.confirmed) ?? sorted[0];
+// An event is over once its last day has fully passed.
+export function isConventionOver(event: ConventionEvent, referenceDate: Date = new Date()): boolean {
+  const lastDay = event.dateEnd ?? event.date;
+  const endOfLastDay = new Date(`${lastDay}T23:59:59.999`);
+  return referenceDate.getTime() > endOfLastDay.getTime();
+}
+
+export function nextConvention(referenceDate: Date = new Date()): ConventionEvent | null {
+  const upcoming = sortedConventions().filter(
+    (event) => event.confirmed && !isConventionOver(event, referenceDate),
+  );
+  return upcoming[0] ?? null;
+}
+
+// The day to count down to: the first day actually attending. */
+export function countdownTargetDate(event: ConventionEvent): string {
+  if (!event.attendingDates?.length) {
+    return event.date;
+  }
+  return [...event.attendingDates].sort()[0];
 }
 
 function formatDay(date: Date): string {
