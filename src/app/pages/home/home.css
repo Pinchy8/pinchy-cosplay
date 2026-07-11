@@ -430,10 +430,7 @@
 
   .cosplan-card__media {
     flex: none;
-  }
-
-  .cosplan-card__image {
-    aspect-ratio: 16 / 9;
+    width: 100%;
   }
 
   .cosplan-card__body {
