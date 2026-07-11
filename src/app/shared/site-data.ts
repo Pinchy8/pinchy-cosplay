@@ -62,7 +62,7 @@ export const INFO_CARDS: InfoCard[] = [
   },
   {
     title: 'Cosplans',
-    image: 'assets/images/info3.png',
+    image: 'assets/images/info5-5.jpg',
     description: 'All the cosplays I have planned to do, and the ones I am currently working on.',
     cosplanItems: [
       // {
@@ -146,7 +146,7 @@ export const INFO_CARDS: InfoCard[] = [
 ];
 
 export const SOCIAL_LINKS = {
-  email: 'pinchy.cos@gmail.com',
+  email: 'contact@pinchycos.be',
   instagram: 'https://instagram.com/pinchy_y',
   tiktok: 'https://tiktok.com/@pinchy_y',
   youtube: 'https://youtube.com/@Pinchy_y',
